@@ -1,0 +1,50 @@
+// { Driver Code Starts
+// Initial Template for C
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+
+ // } Driver Code Ends
+// User function Template for C
+
+int firstRepeated(int *arr, int n) {
+    // code here
+    int i, j;
+for(i = 0;i < n;i++)
+{
+for(j = i+1;j < n;j++){
+if(arr[i] == arr[j])
+{
+return i+1;
+}
+}
+}
+if(i==n)
+return -1;
+}
+
+
+// { Driver Code Starts.
+
+int main() {
+
+    int t;
+    scanf("%d", &t);
+
+    while (t--) {
+        int n;
+        scanf("%d", &n);
+        int *arr;
+        arr = (int *)malloc(n * sizeof(int));
+
+        for (int i = 0; i < n; i++) scanf("%d", &arr[i]);
+
+        printf("%d\n", firstRepeated(arr, n));
+    }
+    return 0;
+}  // } Driver Code Ends
+
+Time Complexity: O(n^n) due to 2 nested for-loops.
+Space Complexity: O(1) as same array given in the ques is traversed.
