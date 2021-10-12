@@ -1,0 +1,56 @@
+// { Driver Code Starts
+#include<bits/stdc++.h>
+using namespace std;
+ // } Driver Code Ends
+ 
+//Function to rotate an array by d elements in counter-clockwise direction.
+class Solution{
+    public:
+    void rotateArr(int arr[], int d, int n){
+        // code here
+        int i,j,r[n],k;
+        for(int i=0;i<n;i++){
+            r[i]=arr[i];
+        }
+        for(j=0;j<n;j++){
+            arr[j]=arr[j+d];
+        }
+        for(k=0;k<d;k++){
+        arr[n-d+k]=r[k];
+    }
+    }
+};
+// { Driver Code Starts.
+
+int main() {
+	int t;
+	//taking testcases
+	cin >> t;
+	
+	while(t--){
+	    int n, d;
+	    
+	    //input n and d
+	    cin >> n >> d;
+	    
+	    int arr[n];
+	    
+	    //inserting elements in the array
+	    for(int i = 0; i < n; i++){
+	        cin >> arr[i];
+	    }
+	    Solution ob;
+	    //calling rotateArr() function
+	    ob.rotateArr(arr, d,n);
+	    
+	    //printing the elements of the array
+	    for(int i =0;i<n;i++){
+	        cout << arr[i] << " ";
+	    }
+	    cout << endl;
+	}
+	return 0;
+}  // } Driver Code Ends
+
+Time Complexity: 3 for-loops run one-by-one = o(n) + O(n) + O(d)= O(2n+d)= 0(n).
+Space Complexity: O(n) as temporary array r[] used other than given array.
