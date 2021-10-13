@@ -12,11 +12,11 @@ class Solution{
         for(int i=0;i<n;i++){
             r[i]=arr[i];
         }
-        for(j=0;j<n;j++){
-            arr[j]=arr[j+d];
-        }
-        for(k=0;k<d;k++){
-        arr[n-d+k]=r[k];
+        for(i=0;i<d;i++){
+        arr[n+i-d]=r[i];}
+        
+        for(i=0;i<n-d;i++){
+        arr[n-d-i-1]=r[n-1-i];}
     }
     }
 };
@@ -52,5 +52,6 @@ int main() {
 	return 0;
 }  // } Driver Code Ends
 
-Time Complexity: 3 for-loops run one-by-one = o(n) + O(n) + O(d)= O(2n+d)= 0(n).
-Space Complexity: O(n) as temporary array r[] used other than given array.
+//Time Complexity: 3 for-loops run one-by-one = o(n) + O(n) + O(d)= O(2n+d)= 0(n).
+//Space Complexity: O(n) as temporary array r[] used other than given array.
+//Soln. got accepted after 8 attempts with time taken as 0.5/2.
