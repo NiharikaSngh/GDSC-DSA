@@ -48,3 +48,4 @@ int main() {
 
 Time Complexity: O(n^n) due to 2 nested for-loops.
 Space Complexity: O(1) as same array given in the ques is traversed.
+//Not accepted as time limit exceeded more than 1.26 secs.
