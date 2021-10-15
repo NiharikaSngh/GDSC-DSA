@@ -15,3 +15,6 @@ for(i=0;i<numsSize-1;i++){
         return false;
     return true;
 }
+
+//Time Complexity: O(numsSize)
+//Space Complexity: O(1)
